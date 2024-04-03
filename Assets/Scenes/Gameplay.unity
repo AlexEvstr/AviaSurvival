@@ -552,6 +552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemies:
   - {fileID: 8679811254816793201, guid: f143b844795b643a99e0f53a0db716d3, type: 3}
+  - {fileID: 4226455420866054252, guid: f7da471d9c61b4cd1b083440ec6f74bc, type: 3}
+  - {fileID: 2501322800364230869, guid: 3a4bf09c1d43c446a9c9e04c98a68757, type: 3}
 --- !u!1001 &886817286
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7055991160327513845}
   - component: {fileID: 8573445352030370797}
-  - component: {fileID: 1945452318755292855}
+  - component: {fileID: 8345859587997641590}
   m_Layer: 0
   m_Name: enemy_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &1945452318755292855
-CapsuleCollider2D:
+--- !u!60 &8345859587997641590
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,9 +117,38 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014983773, y: 0}
-  m_Size: {x: 0.5739672, y: 1.6142857}
-  m_Direction: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0714285, y: 1.6142857}
+    newSize: {x: 3.75, y: 5.65}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.021539688, y: 0.8303639}
+      - {x: -0.12563491, y: 0.525328}
+      - {x: -0.20238096, y: 0.12718706}
+      - {x: -0.53794706, y: -0.22275132}
+      - {x: -0.10303676, y: -0.26765436}
+      - {x: 0.5072036, y: -0.223415}
+      - {x: 0.21633327, y: 0.113756634}
+    - - {x: -0.20552391, y: 0.67768466}
+      - {x: -0.20552391, y: 0.67768466}
+      - {x: -0.20552391, y: 0.67768466}
+    - - {x: -0.20552391, y: 0.67768466}
+      - {x: -0.20552391, y: 0.67768466}
+      - {x: -0.20552391, y: 0.67768466}
+    - - {x: -0.20552391, y: 0.67768466}
+      - {x: -0.20552391, y: 0.67768466}
+      - {x: -0.20552391, y: 0.67768466}
+    - - {x: -0.20552391, y: 0.67768466}
+      - {x: -0.20552391, y: 0.67768466}
+      - {x: -0.20552391, y: 0.67768466}
+  m_UseDelaunayMesh: 0
 --- !u!1 &8679811254816793201
 GameObject:
   m_ObjectHideFlags: 0
