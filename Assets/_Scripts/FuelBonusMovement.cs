@@ -9,8 +9,11 @@ public class FuelBonusMovement : MonoBehaviour
         transform.Translate(Vector2.up * Time.deltaTime * _fuelSpeed);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        transform.Rotate(180, 0, 0);
+        if (!collision.gameObject.CompareTag("Obstacle") && !collision.gameObject.CompareTag("Enemy"))
+        {
+            transform.Rotate(180, 0, 0);
+        }
     }
 }

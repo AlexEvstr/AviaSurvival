@@ -26,22 +26,27 @@ public class UIGameButtons : MonoBehaviour
 
     public void MenuGame()
     {
+        
         if (FuelCount.IsLevelComplete == true)
         {
-            LevelCount.LevelIndex++;
-            PlayerPrefs.SetInt("levelIndex", LevelCount.LevelIndex);
+            int best = PlayerPrefs.GetInt("bestLevel", 1);
+            if (best < LevelCount.LevelIndex + 1)
+            {
+                PlayerPrefs.SetInt("bestLevel", LevelCount.LevelIndex + 1);
+            }
         }
         SceneManager.LoadScene("Menu");
+
     }
 
     public void NextGameLevel()
     {
+        SceneManager.LoadScene("Gameplay");
         if (FuelCount.IsLevelComplete == true)
         {
-            LevelCount.LevelIndex++;
-            PlayerPrefs.SetInt("levelIndex", LevelCount.LevelIndex);
+            PlayerPrefs.SetInt("levelIndex", LevelCount.LevelIndex + 1);
         }  
-        SceneManager.LoadScene("Gameplay");
+        
 
     }
 }
