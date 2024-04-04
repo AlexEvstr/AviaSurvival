@@ -19,7 +19,7 @@ public class MenuPanel : MonoBehaviour
         else UnmuteMusic();
 
 
-        _bestTime = PlayerPrefs.GetFloat("bestTime", 999.99f);
+        _bestTime = PlayerPrefs.GetFloat("bestTime", 0);
         bestTimeText.text = $"Best score: {_bestTime.ToString("F2")}";
     }
 
@@ -30,6 +30,7 @@ public class MenuPanel : MonoBehaviour
 
     public void MuteMusic()
     {
+        _onSound.SetActive(false);
         _offSound.SetActive(true);
         AudioListener.volume = 0;
         PlayerPrefs.SetFloat("mute", 0);
@@ -38,6 +39,7 @@ public class MenuPanel : MonoBehaviour
     public void UnmuteMusic()
     {
         _offSound.SetActive(false);
+        _onSound.SetActive(true);
         AudioListener.volume = 1;
         PlayerPrefs.SetFloat("mute", 1);
     }

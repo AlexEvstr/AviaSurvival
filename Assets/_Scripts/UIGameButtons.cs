@@ -26,13 +26,21 @@ public class UIGameButtons : MonoBehaviour
 
     public void MenuGame()
     {
+        if (FuelCount.IsLevelComplete == true)
+        {
+            LevelCount.LevelIndex++;
+            PlayerPrefs.SetInt("levelIndex", LevelCount.LevelIndex);
+        }
         SceneManager.LoadScene("Menu");
     }
 
     public void NextGameLevel()
     {
-        LevelCount.LevelIndex++;
-        PlayerPrefs.SetInt("levelIndex", LevelCount.LevelIndex);
+        if (FuelCount.IsLevelComplete == true)
+        {
+            LevelCount.LevelIndex++;
+            PlayerPrefs.SetInt("levelIndex", LevelCount.LevelIndex);
+        }  
         SceneManager.LoadScene("Gameplay");
 
     }

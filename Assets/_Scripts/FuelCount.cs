@@ -9,9 +9,11 @@ public class FuelCount : MonoBehaviour
     [SerializeField] private GameObject _winPanel;
     public static int Fuel;
     private float _bestTime;
+    public static bool IsLevelComplete;
 
     private void Start()
     {
+        IsLevelComplete = false;
         _bestTime = PlayerPrefs.GetFloat("bestTime", 999.99f);
         Fuel = 0;
     }
@@ -28,6 +30,8 @@ public class FuelCount : MonoBehaviour
             }
             _winPanel.SetActive(true);
             Time.timeScale = 0;
+            IsLevelComplete = true;
+
         }
     }
 }
